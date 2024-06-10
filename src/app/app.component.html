@@ -1,0 +1,6 @@
+<button (click)="login()">登入</button>
+<button (click)="logout()">登出</button>
+<app-login *ngIf="!isLogin"></app-login>
+<app-platform *ngIf="isLogin">
+  <router-outlet></router-outlet>
+</app-platform>
