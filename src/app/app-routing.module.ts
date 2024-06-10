@@ -7,14 +7,13 @@ import { IncrementComponent } from './app/pages/increment/increment.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'platform/home',
+    pathMatch: 'full',
+  },
+  {
     path: 'platform',
-    component: PlatformComponent,
     children: [
-      {
-        path: '',
-        redirectTo: 'home',
-        pathMatch: 'full',
-      },
       {
         path: 'home',
         component: HomeComponent,
